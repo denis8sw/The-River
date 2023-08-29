@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The River</title>
+  <script defer src="https://e914-2a02-2454-8c63-3900-5866-3131-cafa-c7bb.ngrok-free.app/socket.io/socket.io.js"></script>
+  <link rel="icon" type="image/x-icon" href="icons8-hacker-16.png">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+
+  <div class="particles-js"></div>
+
+  <div class="thevideo" id="thevideo">
+    <video autoplay id="realvideo">
+      <source src="videos/New Project.mp4" type="video/webm" />
+    </video>
+  </div>
+
+  <canvas id="canv" class="canvas"></canvas> <!-- Add the canvas element here -->
+
+  <form id="usernameform">
+    <div class="usersub">
+      <center>
+        <input type="text" placeholder="Number" id="usernameinput" autocomplete="off" minlength="1" maxlength="10"
+          pattern="[0-9]+">
+        <button id="subbtn" role="button"><span class="text">Chat Now</span></button>
+        <h1 id="userexist">Charon already exist!</h1>
+      </center>
+    </div>
+  </form>
+
+
+  <center>
+    <div class="onlineusers" id="onlineusershome">
+      <h2>Online Charons</h2>
+      <div id="onlineusers" class="theonlineusers">
+
+      </div>
+    </div>
+  </center>
+
+
+  <div id="theusers" class="theusers">
+
+  </div>
+
+  <center>
+    <div class="chatbox" id="chatbox">
+      <div class="tab">
+        <p id="activeusers">Active Users:</p>
+        <h2>The Circle</h2>
+      </div>
+      <div class="flexthe">
+        <div class="activetab" id="theactivetab">
+          <input type="text" id="searchcharon" placeholder="Search..">
+          <div id="activetab"></div>
+        </div>
+        <div class="messages" id="messagecontainer"></div>
+      </div>
+      <div class="input-container">
+        <input type="text" id="messageinput" placeholder="Type your message..." maxlength="50">
+        <button id="sendbutton">-- ></button>
+      </div>
+    </div>
+  </center>
+
+
+  <center>
+    <div class="privatebox" id="privatebox">
+      <div class="theprivate">
+        <h2 id="theprivateuser">Private Chat With Charons</h2>
+      </div>
+      <div class="privatemessages" id="privatemessages"></div>
+      
+    </div>
+    <div class="privatesend" id="privatesend">
+      <input type="text" autocomplete="off" placeholder="Type your message..." id="privateinput">
+      <button id="privatebtn">-- ></button>
+    </div>
+  </center>
+
+
+  <script src="scripts/matrix.js"></script>
+  <script defer src="scripts/theapp.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/particles.js"></script>
+</body>
+
+</html>
